@@ -331,6 +331,11 @@ nav a.corner div {
     height: calc(100vh - 30px);
 }
 
+#poster iframe{
+    width: 100%;
+    height: calc(100vh - 30px);
+}
+
 #poster img {
     object-fit: contain;
     object-position: 50% 50%;
