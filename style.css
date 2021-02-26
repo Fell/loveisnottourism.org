@@ -213,19 +213,7 @@ ol li {
     font-weight: bold;
 }
 
-ol li::before {
-    counter-increment: country;
-    display: block;
-    background: #e81123;
-    width: 50px;
-    height: 50px;
-    content: counter(country);
-    position: absolute;
-    margin-left: -60px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-}
+
 
 ol li a,
 ol li a:visited {
@@ -371,4 +359,57 @@ nav a.corner div {
     object-position: 50% 50%;
     width:100%;
     height:100%;
+}
+
+div.overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+div.column {
+    width: 270px;
+    background-color: rgba(0,0,0,0.2); 
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: flex-start;
+}
+
+div.column h4, div.column p {
+    margin: 0;
+    padding: 0;
+}
+
+ol li::before {
+    counter-increment: country;
+    display: block;
+    background: #e81123;
+    width: 50px;
+    height: 50px;
+    /*content: counter(country);*/
+    content: '♥';
+    position: absolute;
+    margin-left: -60px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+div.closed li::before {
+    background: #a20025;
+}
+
+div.unknown li::before {
+    background: #f0a30a;
+}
+
+div.open li::before {
+    background: #60a917;
 }
